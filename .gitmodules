@@ -1,0 +1,4 @@
+[submodule "test/googletest"]
+	path = test/googletest
+	url = https://gitee.com/mirrors/googletest.git
+	branch = v1.13.x
