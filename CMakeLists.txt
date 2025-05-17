@@ -4,11 +4,13 @@ project(object_pool LANGUAGES CXX)
 if(MSVC)
   add_compile_options($<$<CXX_COMPILER_ID:MSVC>:/W4$<SEMICOLON>/Za>)
 else()
-  add_compile_options($<$<CXX_COMPILER_ID:GNU,Clang>-Wextra$<SEMICOLON>-Wpedantic>)
+  add_compile_options(
+    $<$<CXX_COMPILER_ID:GNU,Clang>-Wextra$<SEMICOLON>-Wpedantic>)
 endif()
 
-set(CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
 
 option(BUILD_TESTING ON)
 
